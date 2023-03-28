@@ -4,7 +4,7 @@ const  dotenv = require("dotenv");
 dotenv.config();
 
 
-const connection = ()=>{
+exports.connection = ()=>{
     const MONGOURL = process.env.MONGODB;
     
     mongoose.connect(MONGOURL , {useNewUrlParser:true});
@@ -22,4 +22,4 @@ const connection = ()=>{
     })
 }
 
-export default connection;
+// module.exports= {connection};
