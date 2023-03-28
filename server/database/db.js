@@ -22,4 +22,3 @@ exports.connection = ()=>{
     })
 }
 
-// module.exports= {connection};
