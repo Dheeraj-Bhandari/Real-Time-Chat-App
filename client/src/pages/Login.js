@@ -1,14 +1,15 @@
 import React from 'react'
 import {TextField, Box, Button} from "@mui/material"
 import { useState } from 'react'
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import axios from 'axios';
 import { loginUser } from '../url';
 
 function Login () {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  
+  const navigate = useNavigate()
 
   const HandleLogin=(e)=>{
     e.preventDefault();
@@ -16,7 +17,10 @@ function Login () {
    const data =  {email, password};
    console.log(data)
    try {
-    axios.post(loginUser, data).then((res)=>console.log(res.data)).catch((err)=>console.log(err.response.data));
+    axios.post(loginUser, data).then((res)=>{
+      console.log(res.data)
+      navigate("/charboard")
+    }).catch((err)=>console.log(err.response.data));
    } catch (error) {
     console.log(error)
    }

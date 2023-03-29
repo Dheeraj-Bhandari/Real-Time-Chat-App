@@ -1,0 +1,24 @@
+
+
+.parent{
+    background-color: red;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 20% 50% 20%;
+}
+
+.about_and_setting{
+    background-color: rgb(136, 255, 0);
+}
+
+.coversation{
+    background-color: rgb(8, 0, 255);
+}
+
+.chat_dashboard{
+    background-color: rgb(255, 0, 81);
+}
+
+.chat_info{
+    background-color: rgb(27, 19, 21);
+}
